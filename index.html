@@ -1,56 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
-<link rel="font-awesome" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/brands.min.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-</head>
-<body>
-  <div id="container">
-  <img id="img1" src="images/img4.jpg" alt="currency converter img">
-  <h1 id="head-1">Build A Currency <br> Converter Using <br>Javascript</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Currency Converter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    link
+    <style>
+      /* From Uiverse.io by ShrinilDhorda */
+      .btn {
+        font-size: 1.2rem;
+        padding: 1rem 2.5rem;
+        border: none;
+        outline: none;
+        border-radius: 0.4rem;
+        cursor: pointer;
+        text-transform: uppercase;
+        background-color: rgb(14, 14, 26);
+        color: rgb(234, 234, 234);
+        font-weight: 700;
+        transition: 0.6s;
+        box-shadow: 0px 0px 60px #1f4c65;
+        -webkit-box-reflect: below 10px
+          linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4));
+      }
 
+      .btn:active {
+        scale: 0.92;
+      }
 
-  <div id="con-div">
+      .btn:hover {
+        background: rgb(2, 29, 78);
+        background: linear-gradient(
+          270deg,
+          rgba(2, 29, 78, 0.681) 0%,
+          rgba(31, 215, 232, 0.873) 60%
+        );
+        color: rgb(4, 4, 38);
+      }
 
-    <h1 id="head-2">Currency Converter</h1>
+      body {
+        font-family: "PT Sans", sans-serif;
+      }
 
-    <p id="para-1">Enter Amount</p>
+      h1,
+      h2 {
+        font-family: "Special Gothic Expanded One", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="m-0 w-full relative bg-black">
+    <div id="container" class="m-0">
+      <img
+        id="img1"
+        src="images/img4.jpg"
+        alt="currency converter img"
+        class="w-full h-full object-cover opacity-100"
+      />
 
-    <input id="input-1" type="text" placeholder="Enter here">
+      <h1
+        class="absolute top-[170px] left-[30px] text-white text-[50px] font-normal leading-snug"
+      >
+        Build A Currency <br />
+        Converter Using <br />Javascript
+      </h1>
 
-    <p id="para-2">From</p>
-    <p id="para-3">To</p>
+      <div
+        class="w-[400px] h-[500px] absolute right-[120px] top-[60px] rounded-[20px] border border-white/20 shadow-xl backdrop-blur-[10px] bg-white/10 p-6"
+      >
+        <h2
+          class="text-white text-[25px] font-normal opacity-50 mb-6 text-center"
+        >
+          Currency Converter
+        </h2>
 
-    <select id="selector-1" name="currency">
-      <option value="eur">EUR</option>
-      <option value="usd">USD</option>
-      <option value="pkr">PKR</option>
-      <option value="inr">INR</option>
-      <option value="sar">SAR</option>
-    </select>
+        <label for="input-1" class="block text-white opacity-50 mb-1"
+          >Enter Amount</label
+        >
+        <input
+          id="input-1"
+          type="text"
+          placeholder="Enter here"
+          class="w-[320px] h-[40px] mb-6 bg-transparent border border-white text-white placeholder-white/50 px-2"
+        />
 
-    <select id="selector-2" name="currency">
-      <option value="eur">USD</option>
-      <option value="usd">EUR</option>
-      <option value="pkr">PKR</option>
-      <option value="inr">INR</option>
-      <option value="sar">SAR</option>
-    </select>
+        <div class="flex justify-between mb-4">
+          <div>
+            <label for="fromCurrency" class="block text-white opacity-50 mb-1"
+              >From</label
+            >
+            <select
+              id="fromCurrency"
+              name="currency"
+              class="w-[100px] h-[40px] bg-transparent border border-white text-white text-sm rounded px-2"
+            ></select>
+          </div>
 
-    <button id="btn-1">Get Exchange Rate</button>
+          <div>
+            <label for="toCurrency" class="block text-white opacity-50 mb-1"
+              >To</label
+            >
+            <select
+              id="toCurrency"
+              name="currency"
+              class="w-[100px] h-[40px] bg-transparent border border-white text-white text-sm rounded px-2"
+            ></select>
+          </div>
+        </div>
 
-   
-
-  </div>
-</div>
-</body>
+        <button class="btn">Exchange</button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
 </html>
