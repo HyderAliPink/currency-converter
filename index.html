@@ -65,58 +65,61 @@
       />
 
       <h1
-        class="absolute top-[170px] left-[30px] text-white text-[50px] font-normal leading-snug"
-      >
-        Build A Currency <br />
-        Converter Using <br />Javascript
-      </h1>
-
-      <div
-        class="w-[400px] h-[500px] absolute right-[120px] top-[60px] rounded-[20px] border border-white/20 shadow-xl backdrop-blur-[10px] bg-white/10 p-6"
-      >
-        <h2
-          class="text-white text-[25px] font-normal opacity-50 mb-6 text-center"
-        >
-          Currency Converter
-        </h2>
-
-        <label for="input-1" class="block text-white opacity-50 mb-1"
-          >Enter Amount</label
-        >
-        <input
-          id="input-1"
-          type="text"
-          placeholder="Enter here"
-          class="w-[320px] h-[40px] mb-6 bg-transparent border border-white text-white placeholder-white/50 px-2"
-        />
-
-        <div class="flex justify-between mb-4">
-          <div>
-            <label for="fromCurrency" class="block text-white opacity-50 mb-1"
-              >From</label
-            >
-            <select
-              id="fromCurrency"
-              name="currency"
-              class="w-[100px] h-[40px] bg-transparent border border-white text-white text-sm rounded px-2"
-            ></select>
-          </div>
-
-          <div>
-            <label for="toCurrency" class="block text-white opacity-50 mb-1"
-              >To</label
-            >
-            <select
-              id="toCurrency"
-              name="currency"
-              class="w-[100px] h-[40px] bg-transparent border border-white text-white text-sm rounded px-2"
-            ></select>
-          </div>
+      class="absolute top-[170px] left-[30px] text-white text-[50px] font-normal leading-snug"
+    >
+      Build A Currency <br />
+      Converter Using <br />Javascript
+    </h1>
+  
+    <div
+      class="w-[400px] h-[500px] absolute right-[120px] top-[60px] rounded-[20px] border border-white/20 shadow-xl backdrop-blur-[10px] bg-white/10 p-6"
+    >
+      <h2 class="text-white text-[25px] font-normal opacity-50 mb-6 text-center">
+        Currency Converter
+      </h2>
+  
+      <label for="input-1" class="block text-white opacity-50 mb-1">Enter Amount</label>
+      <input
+        id="input-1"
+        type="text"
+        placeholder="Enter here"
+        class="w-[320px] h-[40px] mb-6 bg-transparent border border-white text-white placeholder-white/50 px-2"
+      />
+  
+      <div class="flex justify-between mb-4">
+        <div>
+          <label for="fromCurrency" class="block text-white opacity-50 mb-1">From</label>
+          <select
+            id="fromCurrency"
+            name="currency"
+            class="w-[100px] h-[40px] bg-[#1f1f1f] border border-white/30 text-white text-sm rounded px-2"
+          >
+            <option value="usd">USD</option>
+            <option value="inr">INR</option>
+            <option value="eur">EUR</option>
+            <option value="gbp">GBP</option>
+          </select>
         </div>
-
-        <button class="btn">Exchange</button>
+  
+        <div>
+          <label for="toCurrency" class="block text-white opacity-50 mb-1">To</label>
+          <select
+            id="toCurrency"
+            name="currency"
+            class="w-[100px] h-[40px] bg-[#1f1f1f] border border-white/30 text-white text-sm rounded px-2"
+          >
+            <option value="usd">USD</option>
+            <option value="inr">INR</option>
+            <option value="eur">EUR</option>
+            <option value="gbp">GBP</option>
+          </select>
+        </div>
       </div>
+  
+      <button class="btn">Exchange</button>
     </div>
-    <script src="app.js"></script>
+  </div>
+  
+  <script src="app.js"></script> 
   </body>
 </html>
