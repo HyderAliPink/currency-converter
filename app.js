@@ -9,8 +9,8 @@ fetch(url)
     return Response.json();
   })
   .then((Response) => {
-    console.log(Response.data);
-    const CurrencyList = Response.data;
+    console.log(Response);
+    const CurrencyList = Response;
     for (const code in CurrencyList) {
       console.log(code);
       const CurrencyList = code;
@@ -21,7 +21,6 @@ fetch(url)
     }
     for (const code in CurrencyList) {
       console.log(code);
-
       const currecy = CurrencyList[code];
       const option = document.createElement("option");
       option.value = code;
