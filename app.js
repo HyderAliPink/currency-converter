@@ -1,5 +1,5 @@
 // const url = `https://api.exchangerate.host/convert?from=${from}&to=${to}&amount=${result}`;
-const url = `https://api.currencyapi.com/v3/latest?apikey=cur_live_0areatAAn7Be8PadND6cgD8lAQaLozMMs5EfXvBW`;
+const url = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies.json`;
 fetch(url)
   .then((Response) => {
     if (!Response.ok) {
