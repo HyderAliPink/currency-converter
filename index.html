@@ -67,7 +67,7 @@
       <h1
       class="absolute top-[170px] left-[30px] text-white text-[50px] font-normal leading-snug"
     >
-      Build A Currency <br />
+      Built A Currency <br />
       Converter Using <br />Javascript
     </h1>
   
@@ -94,10 +94,10 @@
             name="currency"
             class="w-[100px] h-[40px] bg-[#1f1f1f] border border-white/30 text-white text-sm rounded px-2"
           >
-            <option value="usd">USD</option>
+            <!-- <option value="usd">USD</option>
             <option value="inr">INR</option>
             <option value="eur">EUR</option>
-            <option value="gbp">GBP</option>
+            <option value="gbp">GBP</option> -->
           </select>
         </div>
   
@@ -108,18 +108,28 @@
             name="currency"
             class="w-[100px] h-[40px] bg-[#1f1f1f] border border-white/30 text-white text-sm rounded px-2"
           >
-            <option value="usd">USD</option>
+          
+            <!-- <option value="usd">USD</option>
             <option value="inr">INR</option>
             <option value="eur">EUR</option>
-            <option value="gbp">GBP</option>
+            <option value="gbp">GBP</option> -->
           </select>
         </div>
       </div>
   
-      <button class="btn">Exchange</button>
+      <button class="btn" onclick="exchange()">Exchange</button>
+      
+      <textarea
+  id="resultBox"
+  rows="2"
+  readonly
+  class="mt-4 w-full p-3 rounded-xl border border-white border-opacity-30 bg-white bg-opacity-10 text-white text-center text-lg shadow-md backdrop-blur-sm resize-none focus:outline-none"
+></textarea>
+
     </div>
   </div>
   
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="app.js"></script> 
   </body>
 </html>
