@@ -26,7 +26,7 @@ getData().then((res) => {
 function exchange() {
   let fromCurrency = selectOne.value;
   let toCurrency = selectTwo.value;
-  if (userInput.value === "" || userInput.value < 0) {
+  if (userInput.value === "" || userInput.value < 0 || isNaN(userInput.value)) {
     resultBox.innerText = "Please enter a valid amount amount.";
   } else {
     axios(
