@@ -49,9 +49,9 @@ async function marqueeText() {
     // console.log(response.data.usd);
     for (const key in response.data.usd) {
       // console.log(response.data.usd[key]);
-      marquee.innerText += `  ${key.toUpperCase()}  ${String(
-        response.data.usd[key]
-      ).slice(0, 5)} `;
+      marquee.innerText += `  ${key.toUpperCase()} ➟ ${String(
+        response.data.usd[key].toFixed(2, 2)
+      )}, `;
     }
   });
 }
